@@ -1,7 +1,7 @@
 import React from "react";
 import "./Nav.css";
-import "../CartWidget/CartWidget";
 import CartWidget from "../CartWidget/CartWidget";
+
 
 export default function NavBar (){
     return(

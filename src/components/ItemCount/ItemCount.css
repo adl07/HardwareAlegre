@@ -1,0 +1,9 @@
+.colorDeFondo{
+    background-color: #8e9aaf;
+}
+.botonAgregarYRestar{
+    background: none;
+    border-style: none;
+    padding: 0%;
+    margin-bottom: 10px;
+}
