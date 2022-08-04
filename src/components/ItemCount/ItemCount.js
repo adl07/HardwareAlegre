@@ -27,7 +27,7 @@ export default function ItemCount({stock, initial}){
         setProducto (producto - 1)
         if(producto <= 1){
             desactivarBotonEliminar();
-        }
+        } 
     }
     
 
