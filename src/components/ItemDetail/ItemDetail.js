@@ -1,30 +1,16 @@
 import React from "react";
-import "../ItemListContainer/ItemListContainer.css";
 
 
+const ItemDetail = ({price, title,description})=>{
 
-function ItemDetail({item}){
     return(
-        <div>
-            {
-            item.map((prod)=>{
-                return(
-                    <div className="styleFondo">
-                        <div className="styleFondoImagen">
-                        <img src={prod.pic} className="styleImagen"></img>
-                        </div>  
-                        <div className="styleCard">
-                            <h5><span className="styleText">Producto: </span>{prod.titleProduct}</h5>
-                            <h5><span className="styleText">Precio: </span>{prod.price}</h5>
-                            <h5><span className="styleText">Descpiption: </span>{prod.descpiption}</h5>
-                        </div>
-                    </div>
-                )
-            })
-        }
+        <div className="">
+            <h4>{price}</h4>
+            <h4>{title}</h4>
+            <h4>{description}</h4>
         </div>
-        
-    )      
+    )
+
 }
 
-export default ItemDetail;
+export default ItemDetail

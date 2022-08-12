@@ -32,15 +32,13 @@ export default function ItemCount({stock, initial}){
     
 
     return(
-        <div class="card w-50 text-center">
-            <img src="https://oplaygaming.com/wp-content/uploads/2020/10/razer-mamba-elite-gallery-07-gaming-mouse.jpg" class="card-img-top" alt="mouseRyzen"/>
-            <div class="card-body text-center colorDeFondo">
+        <div class=" col-md-4 card w-50 text-center">
+            <div class="card-body text-center">
                 <div class="d-flex">
                 <p>Pruducto Agregado:</p>
                 <p class="card-text px-2">{initial}</p>
                 </div>
                 <div class="d-flex">
-                    <p>Total Agregado:</p>
                     <p class="card-text px-2">{producto}</p>
                 </div>
                 <div class="d-flex justify-content-center">

@@ -1,0 +1,33 @@
+.styleFondo{
+    background: linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+    margin: 10px;
+    color: white;
+}
+.styleBoton{
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+}
+.styleBoton:hover{
+    background-color: #001524;
+    color: #f8edeb;
+    transition: all 0.5s;
+}
+.styleImagen{
+    width: 500px;
+    height: 400px;
+    
+}
+.styleCard{
+    justify-content: center;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 5px;
+}
+
+.styleFondoImagen{
+    background: #001219;
+}
+.styleText{
+    color: black;
+}
