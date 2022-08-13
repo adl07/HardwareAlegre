@@ -1,6 +1,18 @@
-.fondoColor{
-    color: #f8edeb;
-    border: 5px solid #76c893;
-    width: 625px;
-    height: 650px;
+.fondo{
+    width: 400px;
+    height: 200px;
+    border: 2px solid #00b4d8;
+    color: beige;
+    justify-content: center;
+    text-align: center;
+}
+.botonBack{
+    color: beige;
+    text-decoration: none;
+}
+.botonBack:hover{
+    color: #168aad;
+}
+#compra{
+    display: none;
 }

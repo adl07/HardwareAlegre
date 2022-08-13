@@ -45,7 +45,7 @@ export const getCategoria = (catId)=>{
 export const getProductoDetalle = (detId)=>{
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            resolve(Datos.filter(det => det.id === detId))
+            resolve(Datos.find(det => det.id === detId))
         }, 500)
     })
 }

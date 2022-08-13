@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({id, title, pictureUrl, price, description})=>{
     return(    
-                            <div class="styleFondo" key={id}>
+                            <div className="styleFondo" key={id}>
                                 <div className="styleFondoImagen">
                                 <img src={pictureUrl} className="styleImagen"/>
                             </div>

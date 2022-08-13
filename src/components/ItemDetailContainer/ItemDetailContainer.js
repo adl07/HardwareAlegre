@@ -8,21 +8,20 @@ import {getProductoDetalle} from "../productos";
 
 const ItemDetailContainer =() =>{
 
-    const [produc, setProduct] = useState([])
+    const [product, setProduct] = useState()
     const {detId} = useParams()
 
     useEffect(()=>{
-        getProductoDetalle(detId)
-        .then(produc => {
-            setProduct(produc)
+        getProductoDetalle(parseInt(detId))
+        .then(product => {
+            setProduct(product)
         })
 
 }, [detId])
             
     return(
-        <div>
-            <h1 className="text-white">Detalles</h1>
-            <ItemDetail {...produc}></ItemDetail>
+        <div className="">
+                <ItemDetail {...product}></ItemDetail> 
         </div>
         
         
