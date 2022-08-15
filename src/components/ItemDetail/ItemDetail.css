@@ -1,18 +1,47 @@
 .fondo{
     width: 400px;
-    height: 200px;
+    height: 220px;
     border: 2px solid #00b4d8;
     color: beige;
     justify-content: center;
     text-align: center;
 }
 .botonBack{
-    color: beige;
     text-decoration: none;
+    border-radius: 20px;
+    border: none;
 }
 .botonBack:hover{
-    color: #168aad;
+    background-color: #001524;
+    color: #f8edeb;
+    transition: all 0.5s;
+}
+.styleDetail{
+    font-family: 'Raleway', sans-serif;
+}
+
+.botonCompra{
+    text-decoration: none;
+}
+.botonTerminarComrpra{
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+}
+.botonTerminarComrpra:hover{
+    background-color: #001524;
+    color: #f8edeb;
+    transition: all 0.5s;
+}
+#botonContenedor{
+    margin-top: 50px;
+    justify-content: space-around;
+    text-align: center;
+    padding: auto;
 }
 #compra{
     display: none;
+}
+#cantidad{
+    margin: 5px;
 }

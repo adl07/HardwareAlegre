@@ -8,7 +8,7 @@ export default function NavBar (){
     return(
     <nav class="navbar navbar-dark bg-dark p-2">
         <div className="container-fluid">
-            <a clasName="navbar-brand" href="#">Fnx Hardware</a>
+            <h4 className="text-white" href="#">Fnx Hardware</h4>
             <div className="row d-flex contendor-icono">
                 <div className="col-md-4 text-start contendor-icono">
                     <CartWidget/>
