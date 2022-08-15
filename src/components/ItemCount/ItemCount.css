@@ -9,3 +9,13 @@
     margin-bottom: 10px;
     color: aqua;
 }
+.botonAgregarAlCarrito{
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+}
+.botonAgregarAlCarrito:hover{
+    background-color: #001524;
+    color: #f8edeb;
+    transition: all 0.5s;
+}

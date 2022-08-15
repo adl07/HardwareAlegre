@@ -51,7 +51,7 @@ export default function ItemCount({stock, initial, onAdd}){
                         </svg>
                     </button>
                     <div>
-                        <button disabled={stock <= 0} onClick={()=> onAdd(producto)}>Agregar al carrito</button>
+                        <button className="botonAgregarAlCarrito" disabled={stock <= 0} onClick={()=> onAdd(producto)}>Agregar al carrito</button>
                     </div>
                 </div>
             </div>

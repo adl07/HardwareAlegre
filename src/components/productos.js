@@ -30,7 +30,7 @@ export const getData = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(Datos)
-        }, 500)
+        })
     })
 }
 
@@ -38,7 +38,7 @@ export const getCategoria = (catId)=>{
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             resolve(Datos.filter(dat=> dat.categoria === catId))
-        }, 500)
+        })
     })
 }
 
@@ -46,6 +46,6 @@ export const getProductoDetalle = (detId)=>{
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             resolve(Datos.find(det => det.id === detId))
-        }, 500)
+        })
     })
 }

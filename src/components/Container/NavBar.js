@@ -20,12 +20,12 @@ export default function NavBar (){
                 </div>
             </div>
             <div className="collapse navbar-collapse" id="navbarText">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
+                    <ul className="textoNavbar navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
                             <Link to="/" className="nav-link">Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/categoria/mouse" className="nav-link active" aria-current="page" >Mouse</Link>
+                            <Link to="/categoria/mouse" className="nav-link" aria-current="page" >Mouse</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/categoria/mother" className="nav-link" >Mother</Link>

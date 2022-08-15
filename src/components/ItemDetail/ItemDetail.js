@@ -8,7 +8,7 @@ const ItemDetail = ({price, title,description})=>{
 
     const onAdd = (quantity) =>{
         return(
-            document.getElementById('cantidad').innerHTML= `agregaste ${quantity}`,
+            document.getElementById('cantidad').innerHTML= `Agregaste ${quantity} unidad/es`,
             document.getElementById('chau').style.display= 'none',
             document.getElementById('compra').style.display= 'block',
             document.getElementById('botonContenedor').style.display= 'flex'

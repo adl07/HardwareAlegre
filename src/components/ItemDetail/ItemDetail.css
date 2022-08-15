@@ -17,7 +17,7 @@
     transition: all 0.5s;
 }
 .styleDetail{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Abel', sans-serif;
 }
 
 .botonCompra{
@@ -43,5 +43,5 @@
     display: none;
 }
 #cantidad{
-    margin: 5px;
+    margin: 15px;
 }
