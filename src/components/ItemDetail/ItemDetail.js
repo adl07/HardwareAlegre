@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../CartContext/CartContext";
 
 
-const ItemDetail = ({price, title,description})=>{
+
+
+const ItemDetail = ({id,price, title,description})=>{
+
+    const {modificandoCart, } = useCartContext();
 
     const onAdd = (quantity) =>{
+        modificandoCart({id, cantidad: quantity, price, title});
         return(
             document.getElementById('cantidad').innerHTML= `Agregaste ${quantity} unidad/es`,
             document.getElementById('chau').style.display= 'none',
@@ -22,10 +28,10 @@ const ItemDetail = ({price, title,description})=>{
                     <div className="card-header">{title}</div>
                     <div className="card-body">
                     <h5 className="card-title">{description}</h5>
-                    <h5 className="card-title">{price}</h5>
+                    <h5 className="card-title">Precio: ${price}</h5>
                     <h5 id="cantidad"></h5>
                     <div id="botonContenedor">
-                        <Link to="/cart" className="text-decoration-none">
+                        <Link to="/Cart" className="text-decoration-none">
                         <button className="botonTerminarComrpra" id="compra">Terminar compra</button>
                         </Link>
                         

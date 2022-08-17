@@ -1,0 +1,13 @@
+.styleCart{
+    font-family: 'Abel', sans-serif;
+}
+.botonEliminar{
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+}
+.botonEliminar:hover{
+    background-color: #001524;
+    color: #f8edeb;
+    transition: all 0.5s;
+}
