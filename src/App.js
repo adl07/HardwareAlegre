@@ -19,6 +19,7 @@ export default function App() {
             
           <Routes>
               <Route path='/' element={<ItemListContainer/>}/>
+              <Route path='/' element={<CartWidget/>}/>
               <Route path='/categoria/:catId' element={<ItemListContainer/>}/>
               <Route path='/detalle/:detId' element={<ItemDetailContainer/>}/>
               <Route path='/Cart' element={<Cart/>}/>

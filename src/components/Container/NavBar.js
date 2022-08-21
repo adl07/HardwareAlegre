@@ -2,9 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { useCartContext } from "../CartContext/CartContext";
 
 
 export default function NavBar (){
+
+    const {totalDeProductos} = useCartContext();
+
     return(
     <nav class="navbar navbar-dark bg-dark p-2">
         <div className="container-fluid">
