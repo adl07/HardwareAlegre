@@ -1,4 +1,7 @@
 import Imagenes from "./Imagenes/Imagenes";
+import{collection, doc, getDoc, getDocs, query, where} from 'firebase/firestore';
+import { DB } from "./FiresbaseData";
+import { async, safeGet } from "@firebase/util";
 
 const Datos = [{
     id: 1,
@@ -7,6 +10,7 @@ const Datos = [{
     price: "3.950",
     pictureUrl: Imagenes[1],
     categoria: "mouse",
+    stock: 10
 },
 {
     id: 2,
@@ -15,6 +19,7 @@ const Datos = [{
     price: "56.850",
     pictureUrl: Imagenes[2],
     categoria: "procesador",
+    stock: 10
 },
 {
     id: 3,
@@ -23,29 +28,53 @@ const Datos = [{
     price: "17.700",
     pictureUrl: Imagenes[0],
     categoria: "mother",
+    stock: 10
 }
 ];
 
-export const getData = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(Datos)
-        })
-    })
+export async function getData () {
+
+    //creo la referencia de la coleccion que voy a traer
+    const colRef = collection(DB, 'Productos');
+
+    const snapshot = await getDocs(colRef);
+    console.log("snapshot:", snapshot.docs);
+    
+    const prodcutosConFormato = snapshot.docs.map((rawDoc)=>{
+        return{
+        id: rawDoc.id,
+        ...rawDoc.data()
+    }
+    });
+
+    return prodcutosConFormato;
 }
 
-export const getCategoria = (catId)=>{
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            resolve(Datos.filter(dat=> dat.categoria === catId))
-        })
-    })
+
+
+export async function getCategoria (catId) {
+    
+    const consulta = query(collection(DB, 'Productos'), where('categoria', '==', catId));
+    const snapshot2 = await getDocs(consulta);
+
+    const prodcutosCategoria = snapshot2.docs.map((dat)=>{
+        return{
+        id: dat.id,
+        ...dat.data()
+    }
+    });
+
+    return prodcutosCategoria;
+
 }
 
 export const getProductoDetalle = (detId)=>{
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            resolve(Datos.find(det => det.id === detId))
+            resolve(Datos.find(dat=> dat.categoria === detId))
         })
     })
 }
+
+
+
