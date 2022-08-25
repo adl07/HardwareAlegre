@@ -1,8 +1,9 @@
 import React from "react";
 import {useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {getData , getCategoria} from "../productos";
 import ItemList from "../ItemList/ItemList";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { DB } from "../FiresbaseData";
 
 
 
@@ -11,16 +12,18 @@ export default function ItemListContainer(props){
     const {catId} = useParams()
 
     useEffect(()=>{
-        if(!catId){
-            getData().then(info=> {setInfo(info)
-            })
+
+        const productsCollection = collection(DB, 'Productos');
+        if(catId){
+            const productosFiltrados = query(productsCollection, where('categoria', '==', catId))
+            getDocs(productosFiltrados)
+            .then(resp => setInfo(resp.docs.map(product =>({id: product.id, ...product.data()}))));
+        } else{
+            getDocs(productsCollection)
+            .then(resp => setInfo(resp.docs.map(product =>({id: product.id, ...product.data()}))));
         }
-        else{
-            getCategoria(catId).then(info =>{
-                setInfo(info)
-            })
-        }
-        }, [catId])
+        
+    }, [catId])
 
     return(
     <div>

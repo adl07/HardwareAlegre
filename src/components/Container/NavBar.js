@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { useCartContext } from "../CartContext/CartContext";
+import { useParams } from "react-router-dom";
+
 
 
 export default function NavBar (){
-
-    const {totalDeProductos} = useCartContext();
 
     return(
     <nav class="navbar navbar-dark bg-dark p-2">

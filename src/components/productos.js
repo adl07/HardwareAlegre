@@ -3,7 +3,7 @@ import{collection, doc, getDoc, getDocs, query, where} from 'firebase/firestore'
 import { DB } from "./FiresbaseData";
 import { async, safeGet } from "@firebase/util";
 
-const Datos = [{
+/*const Datos = [{
     id: 1,
     title: "Mouse Logitech",
     description: "G203 Lightsync RGB Black ",
@@ -30,9 +30,9 @@ const Datos = [{
     categoria: "mother",
     stock: 10
 }
-];
+];*/
 
-export async function getData () {
+/*export async function getData () {
 
     //creo la referencia de la coleccion que voy a traer
     const colRef = collection(DB, 'Productos');
@@ -74,7 +74,18 @@ export const getProductoDetalle = (detId)=>{
             resolve(Datos.find(dat=> dat.categoria === detId))
         })
     })
+}*/
+
+export const getProductDetail = async (detId) =>{
+    const docRef = doc(DB, 'Productos', detId);
+    const docRefSnap = await getDoc(docRef);
+
+    if(docRefSnap.exists()){
+        return{
+            id: detId,
+            ...docRefSnap.data()
+        }
+    } else{
+        console.log("No hay datos");
+    }
 }
-
-
-
