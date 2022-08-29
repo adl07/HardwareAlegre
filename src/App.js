@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import NavBar from './components/Container/NavBar';
@@ -7,6 +7,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import CartCustomContext from './components/CartContext/CartContext';
 import CartWidget from './components/CartWidget/CartWidget';
+import HomePage from './components/HomePage/HomePage'
+import MarcasContainer from './components/HomePage/Marcas/MarcasContainer';
 
 
 
@@ -18,14 +20,15 @@ export default function App() {
         <CartCustomContext>
           
           <BrowserRouter>
-          <div className="row bg-dark">
+          <div className="row">
             <NavBar/>
             
           <Routes>
-              <Route path='/' element={<ItemListContainer/>}/>
+              <Route path='/' element={<HomePage/>}/>
               <Route path='/' element={<CartWidget/>}/>
               <Route path='/categoria/:catId' element={<ItemListContainer/>}/>
               <Route path='/detalle/:detId' element={<ItemDetailContainer/>}/>
+              <Route path='/marca/:catMarca' element={<MarcasContainer/>}/>
               <Route path='/Cart' element={<Cart/>}/>
               <Route path='/Cart' element={<CartWidget/>}/>
           </Routes>

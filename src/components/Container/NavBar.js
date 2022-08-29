@@ -37,6 +37,9 @@ export default function NavBar (){
                         <li className="nav-item">
                             <Link to="/categoria/procesador" className="nav-link">Procesador</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/categoria/gabinete" className="nav-link">Gabinetes</Link>
+                        </li>
                     </ul>
                 </div>
         </div>

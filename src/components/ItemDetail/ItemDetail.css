@@ -1,14 +1,12 @@
 .fondo{
     width: 400px;
     height: 220px;
-    border: 2px solid #00b4d8;
-    color: beige;
+    color: #001524;
     justify-content: center;
     text-align: center;
 }
 .botonBack{
     text-decoration: none;
-    border-radius: 20px;
     border: none;
 }
 .botonBack:hover{
@@ -25,7 +23,6 @@
 }
 .botonTerminarComrpra{
     text-decoration: none;
-    border-radius: 20px;
     border: none;
 }
 .botonTerminarComrpra:hover{
@@ -34,7 +31,7 @@
     transition: all 0.5s;
 }
 #botonContenedor{
-    margin-top: 50px;
+    margin-top: 30px;
     justify-content: space-around;
     text-align: center;
     padding: auto;
@@ -44,4 +41,10 @@
 }
 #cantidad{
     margin: 15px;
+    font-size: 18px;
+    display: none;
+}
+.sizeIcon{
+    width: 30px;
+    height: 30px;
 }

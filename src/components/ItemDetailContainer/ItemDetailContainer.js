@@ -2,11 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { DB } from "../FiresbaseData";
-import { doc, getDoc } from "firebase/firestore";
+import { DB } from "../ConfigFb/FiresbaseData";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import App from "../../App";
-import { getProductDetail } from "../productos";
-import { getFirestore } from "firebase/firestore";
+
 
 const ItemDetailContainer =() =>{
 
@@ -15,7 +14,7 @@ const ItemDetailContainer =() =>{
 
     useEffect(()=>{
 
-        const intemRef = doc(DB, 'Productos', detId)
+        const intemRef = doc(DB, 'products', detId)
         getDoc(intemRef).then((resp) =>{
             if(resp.exists()){
                 setProduct({id: resp.id, ...resp.data()})
@@ -23,7 +22,7 @@ const ItemDetailContainer =() =>{
         });
     
     }, [detId])
-    
+
         return(
 
             <div>

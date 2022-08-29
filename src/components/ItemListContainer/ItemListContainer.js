@@ -3,7 +3,7 @@ import {useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { DB } from "../FiresbaseData";
+import { DB } from "../ConfigFb/FiresbaseData";
 
 
 
@@ -13,7 +13,7 @@ export default function ItemListContainer(props){
 
     useEffect(()=>{
 
-        const productsCollection = collection(DB, 'Productos');
+        const productsCollection = collection(DB, 'products');
         if(catId){
             const productosFiltrados = query(productsCollection, where('categoria', '==', catId))
             getDocs(productosFiltrados)
@@ -26,9 +26,6 @@ export default function ItemListContainer(props){
     }, [catId])
 
     return(
-    <div>
         <ItemList productos={info}/>
-    </div>
-
     );
 }

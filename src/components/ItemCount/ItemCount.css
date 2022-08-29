@@ -1,6 +1,5 @@
 .colorDeFondo{
-    background: #22333b;
-    color: aliceblue;
+    color: #001524;
 }
 .botonAgregarYRestar{
     background: none;
@@ -8,10 +7,11 @@
     padding: 0%;
     margin-bottom: 10px;
     color: aqua;
+
 }
 .botonAgregarAlCarrito{
     text-decoration: none;
-    border-radius: 20px;
+    width: 150px;
     border: none;
 }
 .botonAgregarAlCarrito:hover{

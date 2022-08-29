@@ -1,12 +1,13 @@
 .styleFondo{
-    background: linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+    background: #17202A;
     margin: 10px;
     color: white;
+    font-family: 'Abel', sans-serif;
 }
 .styleBoton{
-    border-radius: 20px;
     border: none;
     margin: 10px;
+    font-family: 'Abel', sans-serif;
 }
 .styleBoton:hover{
     background-color: #001524;
@@ -14,20 +15,17 @@
     transition: all 0.5s;
 }
 .styleImagen{
-    width: 500px;
-    height: 400px;
-    
+    width: 450px;
+    text-align: center;
+    justify-content: center;
 }
 .styleCard{
     justify-content: center;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Abel', sans-serif;
     margin: 5px;
 }
 
-.styleFondoImagen{
-    background: #001219;
-}
 .styleText{
     color: black;
 }
