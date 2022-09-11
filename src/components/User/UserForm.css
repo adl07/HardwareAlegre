@@ -1,0 +1,38 @@
+.styleInputs{
+    display: flex;
+    position: relative;
+    z-index: 90;
+}
+
+
+.styleInconFont{
+    position: absolute;
+    right: 10px;
+    bottom: 14px;
+    z-index: 100;
+    font-size: 16px;
+}
+
+.styleError{
+    padding-top: 2px;
+    font-size: 12px;
+}
+
+.styleUserForm{
+    background: linear-gradient(to right, #d3cce3, #e9e4f0); 
+    font-family: 'Abel', sans-serif;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.botonUser{  
+    text-decoration: none;
+    border: none;
+    height: 25px;
+    margin-bottom: 30px;
+}
+.botonUser:hover{
+    background-color: #001524;
+    color: #f8edeb;
+    transition: all 0.5s;
+}

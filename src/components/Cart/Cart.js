@@ -6,6 +6,7 @@ import { DB } from '../ConfigFb/FiresbaseData';
 import "./Cart.css";
 import Icons from '../Icons/Icons';
 import swal from 'sweetalert';
+import Card from '../Card/Card';
 
 
 
@@ -13,6 +14,8 @@ import swal from 'sweetalert';
 export default function Cart() {
 
     const {datoProducto, precioTotal, eliminarProducto, limpiandoCart, precioProducto} = useCartContext();
+
+    let datosCard = localStorage.getItem("datosPay");
 
     const test = useCartContext();
     const createOrder = () =>{
@@ -23,9 +26,8 @@ export default function Cart() {
         }))
         let orden = {
             buyer:{
-                name: "Jose Perez",
-                phone: "1146347685",
-                email: "JosePerez@gmail.com"
+                name: datosCard
+                
             },
             itemsTotal: createOrderDetail,
             date: serverTimestamp(),
@@ -69,7 +71,6 @@ export default function Cart() {
             </div>
             </div>
         )
-        
     }
 
     return (
@@ -91,7 +92,12 @@ export default function Cart() {
                 })
                 }
                 <h4 className="m-3 colorTotal">Precio Total: ${precioTotal().toFixed(3)}</h4>
-                <button className="botonesCart" onClick={()=> createOrder()}>Confirmar compra</button>
+
+                <div className="styleFormCard col text-center">
+                    <Card/>
+                    <button id="botonBuy" className="botonesCart" onClick={createOrder}>Terminar compra</button>
+                </div>
+                        
             </div>
             
         </div>

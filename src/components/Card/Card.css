@@ -1,0 +1,15 @@
+.styleForm{
+    background: linear-gradient(to right, #d3cce3, #e9e4f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Abel', sans-serif;
+}
+
+.styleBoton{
+    border: none;
+    margin: 10px;
+    font-family: 'Abel', sans-serif;
+}
+.styleBoton:hover{
+    background-color: #A7D2CB;
+    color: #f8edeb;
+    transition: all 0.5s;
+}

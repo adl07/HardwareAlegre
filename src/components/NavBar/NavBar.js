@@ -2,25 +2,36 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import CartWidget from "../CartWidget/CartWidget";
-import { useCartContext } from "../CartContext/CartContext";
-import { useParams } from "react-router-dom";
-
+import Icons from "../Icons/Icons";
 
 
 export default function NavBar (){
 
     return(
-    <nav class="navbar navbar-dark bg-dark p-2">
+    <nav className="navbar navbar-dark bg-dark p-2">
         <div className="container-fluid">
-            <h4 className="text-white" href="#">Fnx Hardware</h4>
+            <h4 className="marcaTitulo" href="#">Fnx Hardware</h4>
+                <div id="welcomeUser">
+                    <p className="text-white" id="toolTip"></p>
+                    <img className="iconSytleUser" src={Icons[10]}></img>
+                </div>
             <div className="row d-flex contendor-icono">
-                <div className="col-md-4 text-start contendor-icono">
+                <div className="col-md-3 mt-1">
+                    <Link to="/Sending">
+                        <img className="iconSytleUser" type="button" src={Icons[9]}></img>
+                    </Link>
+                </div>
+                <div className="col-md-3 mt-1">
+                    <Link to="/User">
+                        <img className="iconSytleUser" type="button" src={Icons[5]}></img>
+                    </Link>
+                </div>
+                <div className="col-md-3 mt-1 text-start contendor-icono">
                     <CartWidget/>
                 </div>
-                <div className="col-md-4">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                <div className="col-md-3 mt-2">
+                    <img src={Icons[8]} className="iconSytleMenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    </img>
                 </div>
             </div>
             <div className="collapse navbar-collapse" id="navbarText">

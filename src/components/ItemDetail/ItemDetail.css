@@ -30,6 +30,10 @@
     color: #f8edeb;
     transition: all 0.5s;
 }
+.sizeIcon{
+    width: 30px;
+    height: 30px;
+}
 #botonContenedor{
     margin-top: 30px;
     justify-content: space-around;
@@ -43,8 +47,4 @@
     margin: 15px;
     font-size: 18px;
     display: none;
-}
-.sizeIcon{
-    width: 30px;
-    height: 30px;
 }

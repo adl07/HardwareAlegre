@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../CartContext/CartContext";
 import Icons from "../Icons/Icons";
-import { doc } from "firebase/firestore";
+
 
 
 
@@ -18,8 +18,7 @@ const ItemDetail = ({id,title,cantidad, description, price,stock})=>{
         return(
             document.getElementById('cantidad').style.display= 'block',
             document.getElementById('producto').innerHTML= `Agregaste ${quantity} de unidad/es`,
-            document.getElementById('chau').style.display= 'none',
-            document.getElementById('compra').style.display= 'block',
+            document.getElementById('contadorOff').style.display= 'none',
             document.getElementById('botonContenedor').style.display= 'flex'
         )     
     }
@@ -31,32 +30,28 @@ const ItemDetail = ({id,title,cantidad, description, price,stock})=>{
                     <div className="card-body">
                             <h5 className="card-header">{title}</h5>
                             <div className="d-flex justify-content-center">
-                            <h5>Detalle:</h5>
-                            <p>{description}</p>
+                                <h5>Detalle:</h5>
+                                <p>{description}</p>
                             </div>
                             <div className="d-flex justify-content-center">
-                            <h5>Precio:</h5>
-                            <p>${price}</p>
+                                <h5>Precio:</h5>
+                                <p>${price}</p>
                             </div>
                             <div className="d-flex justify-content-center">
-                            <h5>Stock:</h5>
-                            <p>{stock}</p>
+                                <h5>Stock:</h5>
+                                <p>{stock}</p>
                             </div>
                             <div id="cantidad">
                                 <h5 id="producto"></h5>
                                 <img src={Icons[2]} className="sizeIcon"></img>
                             </div>
                             <div id="botonContenedor">
-                            <Link to="/Cart" className="text-decoration-none">
-                            <button className="botonTerminarComrpra" id="compra">Terminar compra</button>
-                            </Link>
-                        
-                            <Link to="/">
-                            <button className="botonBack">Volver al Inicio</button>
-                            </Link>
+                                <Link to="/">
+                                    <button className="botonBack">Volver al Inicio</button>
+                                </Link>
                             </div>
                     </div>
-                    <div id="chau">
+                    <div id="contadorOff">
                         <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                     </div>
                 </div>

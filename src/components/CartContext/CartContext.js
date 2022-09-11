@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { useParams } from 'react-router-dom';
-import swal from 'sweetalert';
+import swal from 'sweetalert'
 
 
 export const CartContext = React.createContext([]);
@@ -10,11 +9,13 @@ export const useCartContext = () => useContext(CartContext);
 export default function CartCustomContext({children}) {
 
     const  [carrito, setCarrrito] = useState([]);
-    const {catId} = useParams()
+    
+    
 
     const modificandoCart = (id) =>{
         setCarrrito([...carrito, id]);
         console.log("elementos del producto", carrito)
+        localStorage.setItem("productos", JSON.stringify([carrito]))
     }
 
     const limpiandoCart = () => setCarrrito([]);
@@ -31,10 +32,10 @@ export default function CartCustomContext({children}) {
         return carrito.reduce((agregado, productoActual) => agregado + productoActual.cantidad, 0);
     }
     
-    const precioProducto = (price) =>{
-        return swal("Valor del componente $" + price)
 
-    }
+    const precioProducto = (price) =>{
+            return swal("Valor del componente $" + price)
+        }
 
     return (
         <CartContext.Provider value={{modificandoCart, datoProducto: carrito, corroborarCart,limpiandoCart, eliminarProducto, precioTotal,totalDeProductos, precioProducto }}>

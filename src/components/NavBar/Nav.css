@@ -1,0 +1,34 @@
+.contendor-icono svg{
+    color: white;
+    margin-top: 10px;
+    width: 21px;
+    height: 21px;
+}
+.textoNavbar{
+    font-family: 'Abel', sans-serif;
+}
+.iconSytleUser{
+    width: 35px;
+    height: 40px;
+
+}
+.iconSytleMenu{
+    width: 30px;
+    height: 30px;
+}
+.marcaTitulo{
+    margin-top: 15px;
+    font-family: 'Abel', sans-serif;
+    background: #ccc;
+    background: radial-gradient(#4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+#welcomeUser{
+    display: none;
+    font-family: 'Abel', sans-serif;
+}
+#toolTip{
+    margin-top: 10px;
+}
+

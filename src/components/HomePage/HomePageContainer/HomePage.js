@@ -1,9 +1,9 @@
 import React from "react";
-import Carrusel from "./Carrusel/Carrusel";
-import MarcasHomePage from "./MarcasHomePage/MarcasHomePage";
+import Carrusel from "../Carrusel/Carrusel";
+import MarcasHomePage from "../MarcasHomePage/MarcasHomePage";
 
 
-export default function home (){
+export default function HomePageContainer (){
     return(
         <div>
             <Carrusel/>
